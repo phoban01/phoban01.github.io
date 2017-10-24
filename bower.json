@@ -1,0 +1,24 @@
+{
+  "name": "phoban01.github.io",
+  "description": "Personal website",
+  "main": "index.js",
+  "authors": [
+    "Piaras Hoban"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/phoban01/phoban01.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "toast": "^2.2.0"
+  },
+  "devDependencies": {
+    "foundation-sites": "^6.4.3"
+  }
+}

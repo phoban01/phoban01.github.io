@@ -1,0 +1,33 @@
+@import 'settings';
+@import 'foundation';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+
+body {
+  padding:1rem;
+}
+h5:before {
+  content:"\2302";
+  padding-right:0.5rem;
+  display: inline;
+  font-size:2rem;
+  color:#4c4c4c;
+}
+hr {
+  margin-right:1rem;
+  max-width:none;
+}
+main {
+  border-right:2rem solid #ff6fcf;
+}
+ul {
+  margin-left:0;
+}
+ul > li {
+  display:inline;
+}
+ul > li:nth-last-child(n+2):after {
+  content:" |";
+}
