@@ -1,0 +1,73 @@
+$breakpoint:768px;
+
+.grid {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 25vh 25vh 25vh 25vh;	
+    &:before {
+    	position:absolute;
+    	content:"piaras hoban";
+    	font-family:$name-font;
+    	color:#ffffff;
+    	z-index:10;
+    	text-align:center;
+    	opacity:0.1;
+    	font-size:3rem;  
+    	left:0.5rem;  	
+    	@media (min-width: $breakpoint) {
+    		top:0;
+    		text-align:left;
+    		left:1rem;
+	    	font-size:5rem;    	
+    	}
+
+    }
+}
+
+.grid-block {
+	position:relative;
+}
+
+.grid-el-1 {
+	background-color:$color-primary-0;
+	grid-column:1;
+	grid-row:1;
+}
+.grid-el-2 {
+	background-color:$color-secondary-1-0;	
+	grid-column:1;
+	grid-row:2;
+}
+.grid-el-3 {
+	background-color:$color-secondary-2-0;		
+	grid-column:1;
+	grid-row:3;
+}
+.grid-el-4 {
+	background-color:$color-complement-0;			
+	grid-column:1;
+	grid-row:4;
+}
+
+@media (min-width: $breakpoint) {
+	.grid {
+	  	grid-template-columns: calc(70vw - 5px) 5px 30vw 0;
+	  	grid-template-rows: calc(60vh - 3px) 3px 40vh 0;
+	}
+  	.grid-el-1 {
+		grid-column:1;
+		grid-row:1;
+	}
+	.grid-el-2 {
+		grid-column:3;
+		grid-row:1;
+	}
+	.grid-el-3 {
+		grid-column:1;
+		grid-row:3;
+	}
+	.grid-el-4 {
+		grid-column:3;
+		grid-row:3;
+	}
+}

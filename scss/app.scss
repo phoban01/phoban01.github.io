@@ -1,33 +1,68 @@
-@import 'settings';
-@import 'foundation';
-
-@include foundation-global-styles;
-@include foundation-grid;
-@include foundation-typography;
+@import '_fonts';
+@import '_colors';
+@import '_grid';
 
 body {
-  padding:1rem;
+	margin:0;
 }
-h5:before {
-  content:"\2302";
-  padding-right:0.5rem;
-  display: inline;
-  font-size:2rem;
-  color:#4c4c4c;
+
+.grid-block {
+	> h2 {
+		z-index:15;
+		margin:0;
+		position:absolute;
+		bottom:0.5rem;
+		right:0.5rem;
+		color:#ffffff;
+		font-family:$landing-header-font;
+		@media (min-width: $breakpoint) {
+			right:1.5rem;			
+			font-size:3.5rem;
+			&:hover {
+				text-decoration: underline;
+				cursor:pointer;
+			}
+		}
+		font-size:3rem;
+	}
+	> img {
+		display:none;
+	}
+	@media (min-width: $breakpoint) {
+		> img {
+			display:block;
+		}
+
+	}
 }
-hr {
-  margin-right:1rem;
-  max-width:none;
+.flex-center {
+	display:flex;
+	align-items: center;
+  	justify-content: center;
 }
-main {
-  border-right:2rem solid #ff6fcf;
+
+.circle-shape {
+	position:absolute;
+	top:-5px;
+	right:0;
+	width:50rem;
 }
-ul {
-  margin-left:0;
+
+.dendrils {
+	position:absolute;
+	top:0;
+	left:0;
+	width:25rem;
 }
-ul > li {
-  display:inline;
+
+.rune {
+	width:10rem;
 }
-ul > li:nth-last-child(n+2):after {
-  content:" |";
+
+.gridlines {
+	height:15rem;
+}
+
+.hide-svg {
+	// visibility:hidden;
 }
