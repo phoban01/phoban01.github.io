@@ -2,37 +2,29 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Piaras Hoban | web home</title>
-	<!-- Global Site Tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-35641703-3"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'UA-35641703-3');
-	</script>
-	<link rel="stylesheet" href="/css/app.css">
+	<title>homepage</title>
+	<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-	<main>
-		<div class="row">
-			<div class="small-12 medium-10 large-8 end columns">
-				<h5>piaras hoban</h5>
-				<ul>
-					<li>web design</li>
-					<li>web development</li>
-					<li>SEO</li>
-					<li>migration</li>
-					<li>solutions</li>
-					<li>consultancy</li>
-				</ul>
-				<hr>
-				<p>view my cv <a href="https://docs.piarashoban.com/cv_gen102017.pdf" target="_blank">HERE</a></p>
-				<p>Some sites that I've designed and developed: <a href="https://www.itma.ie" target="_blank">Irish Traditional Music Archive</a> &amp; <a href="http://goodman.itma.ie" target="_blank">Goodman Manuscript Exhibition Site</a></p>				
-				<small>get in touch: <a href="mailto:piaras.hoban@gmail.com">piaras.hoban@gmail.com</a></small>
-			</div>
+	<section class="grid">
+		<div class="grid-block grid-el-1">
+			<h2>music</h2>
+			<img class="hide-svg circle-shape" src="img/circle_shape.svg" alt="">
 		</div>
-	</main>
+		<div class="grid-block grid-el-2 flex-center">
+			<h2>about</h2>
+			<img class="hide-svg rune" src="img/rune.svg" alt="">
+		</div>
+		<div class="grid-block grid-el-3 flex-center">
+			<h2>web design</h2>
+			<img class="hide-svg gridlines" src="img/gridlines.svg" alt="">
+		</div>
+		<div class="grid-block grid-el-4">
+			<h2>contact</h2>
+			<img class="hide-svg dendrils" src="img/dendrils.svg" alt="">			
+		</div>
+	</section>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+	<script src="js/app.js"></script>
 </body>
 </html>

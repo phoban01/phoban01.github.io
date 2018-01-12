@@ -1,34 +1,32 @@
-'use strict';
+var gulp 		= require('gulp'),
+	livereload 	= require('gulp-livereload'),
+	sass		= require('gulp-sass'),
+	minify		= require('gulp-compress');
 
-var gulp            = require('gulp'),
-    sass            = require('gulp-sass'),
-    autoprefixer    = require('gulp-autoprefixer'),
-    hash            = require('gulp-hash'),
-    nano            = require('gulp-cssnano'),
-    del             = require("del");
+livereload({ start: true,options:{port:8080} });
 
-var config = {}
-config.bower_dir = './bower_components'
+gulp.task('sass', function () {
+  return gulp.src('./scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'))
+    .pipe(livereload())
+});
 
-var sassPaths = [
-    config.bower_dir + '/foundation-sites/scss',
-    config.bower_dir + '/motion-ui/src',
-];
-
-gulp.task('sass',function() {
-    gulp.src('scss/app.scss')
-        .pipe(sass({
-              includePaths: sassPaths,
-              outputStyle: 'compressed'
-        }))
-        .pipe(autoprefixer({
-                    browsers : ["last 20 versions"]
-                }))
-        .pipe(sass.sync().on('error', sass.logError))
-        .pipe(nano())
-        .pipe(gulp.dest("css/"));
+gulp.task('compress',function() {
+	return gulp.src(['/css/*'])
+		.pipe(minify())
 })
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./scss/**/*.scss', ['sass']);
+gulp.task('html', function() {
+  return gulp.src('./*.html')
+    .pipe(livereload());
 });
+
+gulp.task('watch',function() {
+	gulp.watch('scss/**/*.scss',['sass'])
+	gulp.watch('*.html',['html'])
+	gulp.watch('*.js',['html'])
+
+})
+
+gulp.task('default',['watch'])
