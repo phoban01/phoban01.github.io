@@ -12,13 +12,13 @@ $breakpoint:768px;
     	z-index:10;
     	text-align:center;
     	opacity:0.1;
-    	font-size:3rem;  
+    	font-size:1.25rem;  
     	left:0.5rem;  	
     	@media (min-width: $breakpoint) {
-    		top:0;
+    		top:0.25rem;
     		text-align:left;
     		left:1rem;
-	    	font-size:5rem;    	
+	    	font-size:2rem;    	
     	}
 
     }
@@ -51,8 +51,8 @@ $breakpoint:768px;
 
 @media (min-width: $breakpoint) {
 	.grid {
-	  	grid-template-columns: calc(70vw - 5px) 5px 30vw 0;
-	  	grid-template-rows: calc(60vh - 3px) 3px 40vh 0;
+	  	grid-template-columns: calc(70vw - 2px) 2px 30vw 0;
+	  	grid-template-rows: calc(60vh - 1px) 1px 40vh 0;
 	}
   	.grid-el-1 {
 		grid-column:1;

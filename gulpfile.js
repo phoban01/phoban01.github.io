@@ -8,8 +8,8 @@ livereload({ start: true,options:{port:8080} });
 gulp.task('sass', function () {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'))
-    .pipe(livereload())
+    .pipe(gulp.dest('./css'));
+    // .pipe(livereload())
 });
 
 gulp.task('compress',function() {

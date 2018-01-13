@@ -17,13 +17,13 @@ body {
 		font-family:$landing-header-font;
 		@media (min-width: $breakpoint) {
 			right:1.5rem;			
-			font-size:3.5rem;
+			font-size:1.25rem;
 			&:hover {
 				text-decoration: underline;
 				cursor:pointer;
 			}
 		}
-		font-size:3rem;
+		font-size:1.2rem;
 	}
 	> img {
 		display:none;
@@ -45,22 +45,22 @@ body {
 	position:absolute;
 	top:-5px;
 	right:0;
-	width:50rem;
+	width:11rem;
 }
 
 .dendrils {
 	position:absolute;
 	top:0;
 	left:0;
-	width:25rem;
+	width:8rem;
 }
 
 .rune {
-	width:10rem;
+	width:5rem;
 }
 
 .gridlines {
-	height:15rem;
+	height:12rem;
 }
 
 .hide-svg {

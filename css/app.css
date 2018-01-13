@@ -11,14 +11,14 @@
     z-index: 10;
     text-align: center;
     opacity: 0.1;
-    font-size: 3rem;
+    font-size: 1.25rem;
     left: 0.5rem; }
     @media (min-width: 768px) {
       .grid:before {
-        top: 0;
+        top: 0.25rem;
         text-align: left;
         left: 1rem;
-        font-size: 5rem; } }
+        font-size: 2rem; } }
 
 .grid-block {
   position: relative; }
@@ -45,8 +45,8 @@
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: calc(70vw - 5px) 5px 30vw 0;
-    grid-template-rows: calc(60vh - 3px) 3px 40vh 0; }
+    grid-template-columns: calc(70vw - 2px) 2px 30vw 0;
+    grid-template-rows: calc(60vh - 1px) 1px 40vh 0; }
   .grid-el-1 {
     grid-column: 1;
     grid-row: 1; }
@@ -71,11 +71,11 @@ body {
   right: 0.5rem;
   color: #ffffff;
   font-family: "Cutive Mono", sans-serif;
-  font-size: 3rem; }
+  font-size: 1.2rem; }
   @media (min-width: 768px) {
     .grid-block > h2 {
       right: 1.5rem;
-      font-size: 3.5rem; }
+      font-size: 1.25rem; }
       .grid-block > h2:hover {
         text-decoration: underline;
         cursor: pointer; } }
@@ -96,16 +96,16 @@ body {
   position: absolute;
   top: -5px;
   right: 0;
-  width: 50rem; }
+  width: 11rem; }
 
 .dendrils {
   position: absolute;
   top: 0;
   left: 0;
-  width: 25rem; }
+  width: 8rem; }
 
 .rune {
-  width: 10rem; }
+  width: 5rem; }
 
 .gridlines {
-  height: 15rem; }
+  height: 12rem; }
