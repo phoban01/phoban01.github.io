@@ -1,4 +1,8 @@
 var gulp 		= require('gulp'),
+	postcss		= require('gulp-postcss'),
+	cssnano		= require('cssnano'),
+	flexibility = require('postcss-flexibility'),
+	autoprefixr = require('autoprefixer'),
 	livereload 	= require('gulp-livereload'),
 	sass		= require('gulp-sass'),
 	concat		= require('gulp-concat'),
@@ -7,14 +11,24 @@ var gulp 		= require('gulp'),
 
 var bower_path = 'bower_components/'
 var js_srcs = [
+	bower_path + 'viewport-units-buggyfill/viewport-units-buggyfill.js',
 	bower_path + 'css-grid-polyfill-binaries/css-polyfills.min.js',
+	bower_path + 'flexibility/flexibility.js',
+	bower_path + 'jquery/dist/jquery.min.js',
 	'js/main.js'
 ]
+
+var postcss_plugins = [
+        flexibility(),
+        autoprefixr(),
+        // cssnano()
+    ];
 
 
 gulp.task('sass', function () {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss(postcss_plugins))
     .pipe(gulp.dest('./css'));
     // .pipe(livereload())
 });
