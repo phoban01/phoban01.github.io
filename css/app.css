@@ -63,7 +63,7 @@
 body {
   margin: 0; }
 
-.grid-block > h2 {
+.grid-block h2, .grid-block > a > h2 {
   z-index: 15;
   margin: 0;
   position: absolute;
@@ -73,10 +73,10 @@ body {
   font-family: "Cutive Mono", sans-serif;
   font-size: 1.2rem; }
   @media (min-width: 768px) {
-    .grid-block > h2 {
+    .grid-block h2, .grid-block > a > h2 {
       right: 1.5rem;
       font-size: 1.25rem; }
-      .grid-block > h2:hover {
+      .grid-block h2:hover, .grid-block > a > h2:hover {
         text-decoration: underline;
         cursor: pointer; } }
 
