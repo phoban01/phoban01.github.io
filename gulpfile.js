@@ -11,10 +11,6 @@ var gulp 		= require('gulp'),
 
 var bower_path = 'bower_components/'
 var js_srcs = [
-	bower_path + 'viewport-units-buggyfill/viewport-units-buggyfill.js',
-	bower_path + 'viewport-units-buggyfill/viewport-units-buggyfill.hacks.js',
-	bower_path + 'css-grid-polyfill-binaries/css-polyfills.min.js',
-	bower_path + 'flexibility/flexibility.js',
 	bower_path + 'jquery/dist/jquery.min.js',
 	'js/main.js'
 ]
@@ -22,7 +18,7 @@ var js_srcs = [
 var postcss_plugins = [
         flexibility(),
         autoprefixr(),
-        // cssnano()
+        cssnano()
     ];
 
 
@@ -60,3 +56,5 @@ gulp.task('watch',function() {
 })
 
 gulp.task('default',['watch'])
+
+gulp.task('build',['sass','js'])

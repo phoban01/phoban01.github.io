@@ -1,73 +1,95 @@
 $breakpoint:768px;
 
 .grid {
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 25vh 25vh 25vh 25vh;	
-    &:before {
-    	position:absolute;
-    	content:"piaras hoban";
-    	font-family:$name-font;
-    	color:#ffffff;
-    	z-index:10;
-    	text-align:center;
-    	opacity:0.1;
-    	font-size:1.25rem;  
-    	left:0.5rem;  	
-    	@media (min-width: $breakpoint) {
-    		top:0.25rem;
-    		text-align:left;
-    		left:1rem;
-	    	font-size:2rem;    	
-    	}
-
-    }
+	width:100%;  
+	height:100%;	
 }
-
 .grid-block {
 	position:relative;
+	display:block;
+}
+
+.grid-el-1,.grid-el-2,.grid-el-3,.grid-el-4 {
+	width:100%;
+	height:25%;
 }
 
 .grid-el-1 {
 	background-color:$color-primary-0;
-	grid-column:1;
-	grid-row:1;
+	&:before {
+		position:absolute;
+		content:"piaras hoban // homepage";
+		font-family:$name-font;
+		color:#ffffff;
+		z-index:10;
+		text-align:center;
+		opacity:0.5;
+		font-size:1.25rem;  
+		top:1rem;
+		left:1rem;  	
+	}	
 }
 .grid-el-2 {
-	background-color:$color-secondary-1-0;	
-	grid-column:1;
-	grid-row:2;
+	background-color:$color-secondary-1-0;		
 }
 .grid-el-3 {
-	background-color:$color-secondary-2-0;		
-	grid-column:1;
-	grid-row:3;
+	background-color:$color-secondary-2-0;	
 }
 .grid-el-4 {
 	background-color:$color-complement-0;			
-	grid-column:1;
-	grid-row:4;
+}
+
+.hide-for-small {
+	display:none!important;
 }
 
 @media (min-width: $breakpoint) {
-	.grid {
-	  	grid-template-columns: calc(70vw - 2px) 2px 30vw 0;
-	  	grid-template-rows: calc(60vh - 1px) 1px 40vh 0;
+	// helpers
+	.show-for-small {
+		display:none!important;
 	}
-  	.grid-el-1 {
-		grid-column:1;
-		grid-row:1;
+	.hide-for-small {
+		display:table!important;
+	}
+	// the grid
+	.grid {
+	    display:table;
+	    width: 100%;
+	    table-layout: fixed;
+	}
+	.grid:nth-of-type(1) {
+		height:60%;
+	}
+	.grid:nth-of-type(2) {
+		height:40%;
+	}
+	// grid elements
+	.grid-block {
+		position:relative;
+	    display: table-cell;	
+	}
+	// individual element styles
+	.grid-el-1 {
+		width:70%;
+		border-right:2px solid #ffffff;
+		&:before { 	
+			top:0.5rem;
+			text-align:left;
+			left:1rem;
+	    	font-size:1.75rem;    	
+		}	
 	}
 	.grid-el-2 {
-		grid-column:3;
-		grid-row:1;
+		width:30%;
+		border-bottom:1px solid #ffffff;	
 	}
 	.grid-el-3 {
-		grid-column:1;
-		grid-row:3;
+		width:70%;	
+		border-top:1px solid #ffffff;
+		border-right:2px solid #ffffff;
 	}
 	.grid-el-4 {
-		grid-column:3;
-		grid-row:3;
+		width:30%;	
+		border-top:1px solid #ffffff;	
 	}
 }
