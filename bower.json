@@ -1,0 +1,20 @@
+{
+  "name": "phoban01.github.io",
+  "description": "website npm dev packages",
+  "main": "gulpfile.js",
+  "authors": [
+    "piaras hoban"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/phoban01/phoban01.github.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
