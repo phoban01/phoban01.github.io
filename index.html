@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>homepage</title>
-	<link rel="stylesheet" href="css/app.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>piaras.hoban | home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-	<section class="grid">
-		<div class="grid-block grid-el-1">
-			<a href="https://soundcloud.com/piarashoban" target="_blank"><h2>music</h2></a>
-			<img class="hide-svg circle-shape" src="img/circle_shape.svg" alt="">
-		</div>
-		<div class="grid-block grid-el-2">
-			<a href="https://docs.piarashoban.com/cv_gen102017.pdf" target="_blank"><h2>about</h2></a>
-			<img class="hide-svg rune center-image" src="img/rune.svg" alt="">
-		</div>
-		<div class="grid-block grid-el-3 show-for-small">
-			<h2>web design</h2>
-		</div>
-		<div class="grid-block grid-el-4 show-for-small">
-			<a href="mailto:piaras.hoban@gmail.com"><h2>contact</h2></a>
-		</div>		
-	</section>
-	<section class="grid hide-for-small">
-		<div class="grid-block grid-el-3">
-			<h2>web design</h2>
-			<img class="hide-svg gridlines center-image" src="img/gridlines.svg" alt="">
-		</div>
-		<div class="grid-block grid-el-4">
-			<a href="mailto:piaras.hoban@gmail.com"><h2>contact</h2></a>
-			<img class="hide-svg dendrils" src="img/dendrils.svg" alt="">			
-		</div>
-	</section>
-	<script src="js/app.min.js"></script>
+    <css-doodle>
+        :doodle { @grid: 50 x 50 / 50vmax 50vmin; overflow: hidden; } :container { grid-template-rows: auto; grid-template-columns: repeat(auto-fill, 1vmin); grid-auto-flow: dense; grid-auto-rows: 1vmin; } --span: @rand(3); grid-column-end: span var(--span);
+        grid-row-end: span var(--span); transform: rotate(@rand(-5deg,5deg)); background-color: hsla( calc(80 * @index()), 90%, 70%, calc(3 / @rand(1,20) ) );
+    </css-doodle>
+    <div class="bio">
+        <h1>Piaras Hoban</h1>
+        <ul>
+            <a href="https://docs.piarashoban.com/cv_gen102017.pdf">
+                <li>about</li>
+            </a>
+            <a href="https://soundcloud.com/piarashoban">
+                <li>music</li>
+            </a>
+            <a href="https://github.com/phoban01">
+                <li>code</li>
+            </a>
+            <a href="mailto:piaras.hoban@gmail.com">
+                <li>contact</li>
+            </a>
+        </ul>
+    </div>
+    <script src="dist/main.js"></script>
 </body>
+
 </html>

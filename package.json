@@ -1,32 +1,20 @@
 {
-  "name": "phoban01.github.io",
+  "name": "test-css-doodle",
   "version": "1.0.0",
-  "description": "website npm dev packages",
-  "main": "gulpfile.js",
-  "dependencies": {},
-  "devDependencies": {
-    "autoprefixer": "^7.2.5",
-    "cssnano": "^3.10.0",
-    "gulp": "^3.9.1",
-    "gulp-compress": "0.0.9",
-    "gulp-concat": "^2.6.1",
-    "gulp-livereload": "^3.8.1",
-    "gulp-postcss": "^7.0.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "postcss-flexibility": "^2.0.0"
-  },
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "npx wp"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://phoban01@github.com/phoban01/phoban01.github.io.git"
-  },
-  "author": "piaras hoban",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/phoban01/phoban01.github.io/issues"
+  "dependencies": {
+    "css-doodle": "^0.3.2",
+    "npm": "^6.1.0"
   },
-  "homepage": "https://github.com/phoban01/phoban01.github.io#readme"
+  "devDependencies": {
+    "webpack": "^4.12.1",
+    "webpack-command": "^0.3.0"
+  }
 }
